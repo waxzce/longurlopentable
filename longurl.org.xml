@@ -14,6 +14,13 @@
                 <key id="url" type="xs:string" paramType="query" required="true"/>
                 <key id="user-agent" type="xs:string" paramType="query" required="false" default="opentable/yql"/>
                 <key id="all-redirects" type="xs:boolean" paramType="query" required="false" default="true"/>
+                <key id="content-type" type="xs:boolean" paramType="query" required="false" default="true"/>
+                <key id="response-code" type="xs:boolean" paramType="query" required="false" default="true"/>
+                <key id="title" type="xs:boolean" paramType="query" required="false" default="true"/>
+                <key id="rel-canonical" type="xs:boolean" paramType="query" required="false" default="true"/>
+                <key id="meta-keywords" type="xs:boolean" paramType="query" required="false" default="true"/>
+                <key id="meta-description" type="xs:boolean" paramType="query" required="false" default="true"/>
+                <key id="format" const="true" type="xs:string" paramType="query" required="false" default="xml"/>
             </inputs>
 
         </select>
