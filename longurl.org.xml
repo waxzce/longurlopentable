@@ -6,7 +6,7 @@
         <sampleQuery>use 'http://github.com/waxzce/longurlopentable/raw/master/longurl.org.xml'; select * from longurl.org.expand where url='http://is.gd/w';</sampleQuery>
     </meta>
     <bindings>
-        <select itemPath="expand" produces="XML">
+        <select itemPath="response" produces="XML">
             <urls>
                 <url>http://api.longurl.org/v2/expand</url>
             </urls>
