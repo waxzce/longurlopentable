@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<table xmlns="http://query.yahooapis.com/v1/schema/table.xsd">
+<table xmlns="http://query.yahooapis.com/v1/schema/table.xsd" securityLevel="any">
     <meta>
         <author>Quentin ADAM - waxzce</author>
         <documentationURL>http://longurl.org/api</documentationURL>
+        <sampleQuery>use 'http://github.com/waxzce/longurlopentable/raw/master/longurl.org.xml'; select * from longurl.org.expand where url='http://is.gd/w';</sampleQuery>
     </meta>
     <bindings>
-        <select itemPath="" produces="XML">
+        <select itemPath="expand" produces="XML">
             <urls>
 
-                <url>http://api.longurl.org/v2/expand</url>
+                <url>http://api.longurl.org/v2/expand?format=xml&user-agent=opentable/yql&url={url}</url>
             </urls>
             <inputs>
-                <key id="url" type="xs:string" paramType="query" required="true"/>
+                <key id="url" type="xs:string" paramType="variable" required="true"/>
             </inputs>
 
         </select>
