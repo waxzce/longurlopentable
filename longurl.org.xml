@@ -8,11 +8,12 @@
     <bindings>
         <select itemPath="expand" produces="XML">
             <urls>
-
-                <url>http://api.longurl.org/v2/expand?format=xml&user-agent=opentable/yql&url={url}</url>
+                <url>http://api.longurl.org/v2/expand</url>
             </urls>
             <inputs>
-                <key id="url" type="xs:string" paramType="variable" required="true"/>
+                <key id="url" type="xs:string" paramType="query" required="true"/>
+                <key id="user-agent" type="xs:string" paramType="query" required="false" default="opentable/yql"/>
+                <key id="all-redirects" type="xs:boolean" paramType="query" required="false" default="true"/>
             </inputs>
 
         </select>
